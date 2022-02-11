@@ -53,21 +53,26 @@
     padding: 5rem 1rem;
     
     
+    
     background: white;
     color: black;
     display:grid;
     grid-template-columns: 100%;
     grid-template-rows:20% 20% 20% 20% 20%; 
     grid-gap:20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 3px 0px 2px rgba(238, 238, 238, 0.1), 0px 6px 0px 4px rgba(214, 211, 211, 0.1), 0px 9px 0px 6px rgba(221, 220, 220, 0.1), 5px 5px 15px 5px rgba(207, 207, 207, 0); 
+box-shadow: 0px 0px 0px px rgba(218, 218, 218, 0.1), 0px 6px 0px 4px rgba(0,0,0,0.1), 0px 9px 0px 6px rgba(218, 218, 218, 0.1), 5px 5px 15px 5px rgba(219, 218, 218, 0);
+    
   }
-    
-    
     
   
 
   .rowcellule{
+    margin-top: -30px;
     text-align: center;
       /*border: dashed red;8*/
+
   }
 
   .rowcellule2{
@@ -83,13 +88,51 @@
 
   .rowcellule4{
     border-bottom: 1px dotted black;
-    padding-top:70px;
+    
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    
    
   }
 
   .rowcellule5{
-    padding-top:15px;
+    padding-top:20px;
   }
+
+  button{
+    border-radius: 150px;
+    width:60%;
+    height:70%;
+    background-color: white;
+    
+    color:black;
+    border:none;
+    opacity:1
+  }
+
+  button:hover {
+   opacity:1;
+   border-radius: 150px;
+   width:60%;
+   height:70%;
+   background-color:#4BAAF4;
+   color:white;
+   border:none;
+   cursor : pointer
+   
+  }
+
+
+  /*here below ... i need to work on this ... */
+  button:hover + .rowcellule4  {
+     opacity:0;
+  }
+
+
+
+
+
+
+
+ 
