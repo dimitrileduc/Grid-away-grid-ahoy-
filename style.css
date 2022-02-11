@@ -1,11 +1,92 @@
-.grid {
+.auto-grid {
+    --auto-grid-min-size: 14rem;
+  }
+  
+  .auto-grid > * {
+    max-width:600px;
+    height:250px;
+  }
+  
+  .auto-grid > * + * {
+    margin-top: 1rem;
+  }
+  
+  @supports(display: grid) {
+    .auto-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+      grid-gap: 1rem;
+    }
+    
+    .auto-grid > * {
+      max-width: unset;
+    }
+  
+    .auto-grid > * + * {
+      margin-top: unset;
+    }
+  }
+  
+  /*
+    WRAPPER
+    A utility with a max width that contains child elements and horizontal centers them
+  */
+  .wrapper {
+    max-width: 65rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+   
+   
+  }
+  
+  
+  /* Presentational styles */
+  
+  body {
+    background:  #E7EFF6;
+    padding: 1rem 0;
+    line-height: 1.4;
+    font-family: sans-serif;
+  }
+  
+  li {
+    padding: 5rem 1rem;
+    
+    
+    background: white;
+    color: black;
     display:grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 50% 50%;
-    min-height:100vh;
-    border: dashed red;
-}
+    grid-template-columns: 100%;
+    grid-template-rows:20% 20% 20% 20% 20%; 
+    grid-gap:20px;
+  }
+    
+    
+    
+  
 
-.case{
-    border: dashed black;
-}
+  .rowcellule{
+    text-align: center;
+      /*border: dashed red;8*/
+  }
+
+  .rowcellule2{
+    text-align: center;
+  }
+
+  .rowcellule3{
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 14px;
+    padding-top:10px;
+  }
+
+  .rowcellule4{
+    border-bottom: 1px dotted black;
+    padding-top:70px;
+   
+  }
+
+  .rowcellule5{
+    padding-top:15px;
+  }
